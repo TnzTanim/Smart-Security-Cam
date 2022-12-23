@@ -8,13 +8,13 @@ cap = cv2.VideoCapture(0)
 
 
 
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml") #to detect the face and body
 body_cascade = cv2.CascadeClassifier( cv2.data.haarcascades + "haarcascade_fullbody.xml")
 
 detection = False
 detection_stopped_time = None
 timer_started = False
-SECONDS_TO_RECORD_AFTER_DETECTION = 5
+SECONDS_TO_RECORD_AFTER_DETECTION = 5 #while the subject is out of frame, the camera will wait for 5 seconds and then save the video.
 
 frame_size = (int(cap.get(3)), int(cap.get(4)))
 fourcc = cv2.VideoWriter_fourcc(*"mp4v")
@@ -32,7 +32,7 @@ while True:
         else:
             detection = True
             current_time = datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S")
-            name=(f"{current_time}")
+            name=(f"{current_time}") #Creating an unique name for the video file. It's really important to send the video.
 
             out = cv2.VideoWriter( name+".mp4", fourcc, 20, frame_size)
 
@@ -45,7 +45,7 @@ while True:
                 detection = False
                 timer_started = False
                 out.release()
-                from Test import email
+                from Test import email #created the email script as Test.py and the function is called email. this step starts after video recording.
                 email(name)
                 print(email)
 
