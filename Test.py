@@ -5,10 +5,15 @@ def email(term):
     from email.mime.base import MIMEBase
     from email import encoders
 
-    email_user = 'tanimahmedac@gmail.com'
-    email_password = 'TANZIBUL'
-    email_send = 'tanimahmedac@gmail.com'
-
+    email_user = 'Your Email'
+    email_password = 'Your email password'
+    email_send = 'The email you want to send the video.'
+    
+    #example 
+    #email_user = 'myemail@gmail.com'
+    #email_password = '123.....'
+    #email_send = 'mysecondemail@gmail.com'
+    
     subject = 'Security alart'
 
     msg = MIMEMultipart()
