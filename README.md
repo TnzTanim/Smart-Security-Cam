@@ -7,4 +7,6 @@ So you don't have to worry about monitoring your house anymore, this smart syste
 
 Furthermore there are immense ways to develop this project. I'll keep updating as much as I can. Feel free to use it and make it more useful.
 
+If you wanna use it, just Copy those two scripts, install all the libraries and insert your email in the Test.py folder.Run the Security.py  and you're good to go.
+
 Thanks.
